@@ -297,7 +297,7 @@ Previously, my research centered on **nonparametric statistics** and **measureme
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
         </span>
         <span class="mtile__cap">
-          <span class="mtile__cap-title">iPhone 18 Pro</span>
+          <span class="mtile__cap-title">iPhone 17 Pro</span>
           <span class="mtile__cap-domain">apple.com</span>
         </span>
       </a>
