@@ -501,41 +501,44 @@
     }
   }
 
-  /* 悉尼大学 + 墨尔本大学 Logo 并排 */
+/* 两个大学 Logo 横向排列 */
+.header-school-logos {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+/* 统一放大两个 Logo */
+.header-school-logos .logo {
+  height: 95px;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  display: block;
+}
+
+/* 平板与手机 */
+@media (max-width: 768px) {
   .header-school-logos {
-    display: flex;
-    align-items: center;
-    gap: 24px;
+    gap: 15px;
   }
 
   .header-school-logos .logo {
-    height: 72px;
-    width: auto;
-    max-width: 240px;
-    object-fit: contain;
+    height: 50px;
+    max-width: 145px;
+  }
+}
+
+/* 手机竖屏整体右对齐 */
+@media (max-width: 480px) and (orientation: portrait) {
+  .header-school-logos {
+    margin-left: auto;
   }
 
-  @media (max-width: 768px) {
-    .header-school-logos {
-      gap: 12px;
-    }
-
-    .header-school-logos .logo {
-      height: 42px;
-      max-width: 140px;
-    }
+  .header-school-logos .header-logo {
+    margin-left: 0;
   }
-
-  /* 手机竖屏时，让两个 Logo 作为整体对齐 */
-  @media (max-width: 480px) and (orientation: portrait) {
-    .header-school-logos {
-      margin-left: auto;
-    }
-
-    .header-school-logos .header-logo {
-      margin-left: 0;
-    }
-  }
+}
 </style>
 
 </head>
