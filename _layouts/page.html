@@ -558,9 +558,13 @@
           </button>
         </div>
 
-        <a class="header-logo" href="{{ site.url }}" aria-label="{{ site.owner.name }}">
-          <img src="/logo/usyd%20logo.png" class="logo logo--light" alt="University of Sydney">
-          <img src="/logo/usyd%20logo.png" class="logo logo--dark" alt="University of Sydney">
+        <a class="header-logo" href="{{ '/' | relative_url }}" aria-label="{{ site.owner.name }}">
+        <img src="{{ '/images/logo/usyd-logo.png' | relative_url }}"
+        class="logo logo--light"
+        alt="University of Sydney">
+        <img src="{{ '/images/logo/usyd-logo.png' | relative_url }}"
+        class="logo logo--dark"
+        alt="University of Sydney">
         </a>
 
         <div class="header-actions">
