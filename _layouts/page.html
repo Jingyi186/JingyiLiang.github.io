@@ -494,6 +494,48 @@
       transition: none !important;
     }
   }
+  @media (prefers-reduced-motion: reduce) {
+    .mobile-contact-panel,
+    .mobile-avatar-btn {
+      transition: none !important;
+    }
+  }
+
+  /* 悉尼大学 + 墨尔本大学 Logo 并排 */
+  .header-school-logos {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .header-school-logos .logo {
+    height: 72px;
+    width: auto;
+    max-width: 240px;
+    object-fit: contain;
+  }
+
+  @media (max-width: 768px) {
+    .header-school-logos {
+      gap: 12px;
+    }
+
+    .header-school-logos .logo {
+      height: 42px;
+      max-width: 140px;
+    }
+  }
+
+  /* 手机竖屏时，让两个 Logo 作为整体对齐 */
+  @media (max-width: 480px) and (orientation: portrait) {
+    .header-school-logos {
+      margin-left: auto;
+    }
+
+    .header-school-logos .header-logo {
+      margin-left: 0;
+    }
+  }
 </style>
 
 </head>
@@ -558,14 +600,39 @@
           </button>
         </div>
 
-        <a class="header-logo" href="{{ '/' | relative_url }}" aria-label="{{ site.owner.name }}">
-        <img src="{{ '/images/logo/usyd-logo.png' | relative_url }}"
-        class="logo logo--light"
-        alt="University of Sydney">
-        <img src="{{ '/images/logo/usyd-logo.png' | relative_url }}"
-        class="logo logo--dark"
-        alt="University of Sydney">
-        </a>
+        <div class="header-school-logos">
+
+  <!-- 悉尼大学 Logo -->
+  <a class="header-logo"
+     href="{{ '/' | relative_url }}"
+     aria-label="University of Sydney">
+
+    <img src="{{ '/images/logo/usyd-logo.png' | relative_url }}"
+         class="logo logo--light"
+         alt="University of Sydney">
+
+    <img src="{{ '/images/logo/usyd-logo.png' | relative_url }}"
+         class="logo logo--dark"
+         alt="University of Sydney">
+
+  </a>
+
+  <!-- 墨尔本大学 Logo -->
+  <a class="header-logo"
+     href="{{ '/' | relative_url }}"
+     aria-label="University of Melbourne">
+
+    <img src="{{ '/images/logo/logo-melbourne-uni.png' | relative_url }}"
+         class="logo logo--light"
+         alt="University of Melbourne">
+
+    <img src="{{ '/images/logo/logo-melbourne-uni.png' | relative_url }}"
+         class="logo logo--dark"
+         alt="University of Melbourne">
+
+  </a>
+
+</div>
 
         <div class="header-actions">
           <div class="header-social">
