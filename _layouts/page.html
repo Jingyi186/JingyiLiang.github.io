@@ -538,6 +538,112 @@
     margin-left: 0;
   }
 }
+  /* ==========================================
+   Elegant Header Divider + Pill Navigation
+   ========================================== */
+
+/* 顶部导航区域 */
+.header-bottom {
+  position: relative;
+  margin-top: 18px;
+  padding: 18px 0 12px;
+  border-top: none;
+}
+
+/* 红蓝渐变分界线 */
+.header-bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #B30B24 0%,
+    #174C8A 48%,
+    rgba(23, 76, 138, 0) 100%
+  );
+}
+
+/* 导航栏布局 */
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* 胶囊按钮 */
+.header-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 20px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(25, 49, 86, 0.15);
+
+  color: #35445D;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* 去掉原来的斜杠分隔符 */
+.header-nav a:not(:last-child)::after {
+  content: none;
+}
+
+/* 鼠标悬停时 */
+.header-nav a:hover {
+  color: #102A55;
+  background: #F0F4FA;
+  box-shadow: 0 4px 14px rgba(15, 42, 85, 0.12);
+  transform: translateY(-2px);
+}
+
+/* 当前页面按钮 */
+.header-nav a.is-current {
+  color: #FFFFFF;
+  background: #102A55;
+  border-color: #102A55;
+  box-shadow: 0 4px 12px rgba(16, 42, 85, 0.2);
+}
+
+/* 当前页面悬停 */
+.header-nav a.is-current:hover {
+  color: #FFFFFF;
+  background: #173F7D;
+}
+
+/* 手机端 */
+@media (max-width: 768px) {
+  .header-bottom {
+    margin-top: 10px;
+    padding: 12px 0 8px;
+  }
+
+  .header-nav {
+    gap: 7px;
+  }
+
+  .header-nav a {
+    padding: 7px 11px;
+    font-size: 11px;
+    letter-spacing: 0.01em;
+  }
+}
 </style>
 
 </head>
